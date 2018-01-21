@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Надо спать!</title>	
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />	
+  <meta name="viewport" content="width=1000">
+  <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="./js/cfn.js"></script>
+  <script type="text/javascript" src="./js/plugins.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.related-items').tabs();
+      $('input, select').styler();
+      $('.main-carousel').carouFredSel({circular: false,infinite: false, auto:false,width:790,items:{width: 790,height:250},prev: {button: "#btn-prev-b",key: "left"},next: {button: "#btn-next-b",key: "right"} });
+      $('.carousel').carouFredSel({circular: false,infinite: false, auto:false,width:675,height:60,items:{width: 134,height:53},prev: {button: "#btn-prev",key: "left"},next: {button: "#btn-next",key: "right"} });
+      $('#link-region').on('click',function(e){e.preventDefault();
+        $('#dialog-region').dialog({width: 180,modal: true,position:{of:$('#header'),my: "left top", at: "left+40 top+25" },dialogClass: "region"});
+        $('.ui-widget-overlay').css({'width':'1000px'}).position({of:$('body'),my: "center top", at: "center top" });
+      });
+      $(window).resize(function(){$('.ui-widget-overlay').css({'left':$('#middle').offset().left});});
+    });
+  </script>
+</head>
+<body>
+<div id="wrapper">
+  <div id="header">
+    <div id="userbar">
+      <span>Регион: <a href="/" id="link-region">Москва</a></span>
+      <span class="phone">Телефоны: <strong>7 (812) 643-23-95;  +7 (812) 643-23-95</strong></span>
+      <span><a href="#">Заказать звонок</a></span>
+      <div class="search">
+        <form action="/search">
+          <button>поиск</button>
+          <input type="text" data-placeholder="найти..." />
+        </form>
+      </div>
+      <div class="basket"><a href="#"><span class="icon-basket"></span>В корзине</a> <strong>(143)</strong></div>     
+    </div>
+    <div id="headerbar">
+      <div id="headerbar-inner">
+        <div id="logo">
+          <a href="/"><img src="./images/logo.png" alt="" width="139" height="84"></a>
+        </div>
+        <div class="navbar navbar-top-2nd">        
+          <ul>
+            <li><a href="/"><span class="icon-matr-t"></span>Матрасы</a></li>
+            <li><a href="/"><span class="icon-bed-t"></span>Кровати</a></li>
+            <li><a href="/"><span class="icon-bedc-t"></span>Постельное белье</a></li>
+            <li><a href="/"><span class="icon-cover-t"></span>Чехлы</a></li>
+            <li><a href="/"><span class="icon-mcover-t"></span>Наматрасники</a></li>
+            <li><a href="/"><span class="icon-pill-t"></span>Подушки</a></li>
+            <li><a href="/"><span class="icon-blank-t"></span>Одеяла</a></li>
+            <li><a href="/"><span class="icon-base-t"></span>Основания</a></li>
+            <li><a href="/"><span class="icon-headb-t"></span>Изголовья</a></li>
+            <li class="spec-item"><a href="/"><span class="icon-forchild-t"></span>Для детей</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul class="navbar navbar-top-3rd">
+      <li class="active"><a href="/">Как купить</a></li>
+      <li><a href="/">Доставка</a></li>
+      <li><a href="/">Гарантии</a></li>
+      <li><a href="/">Адреса магазинов</a></li>
+    </ul><div class="clearfix"></div>
+  </div>
+  <div id="middle">
+    <div id="banner" >
+      <ul class="main-carousel">
+      <li>
+        <div class="row-fluid">
+          <div class="span5">
+            <div class="row-fluid">
+              <div class="span6">
+                <img src="images/banner/good-of-day_06.jpg" alt="" />
+                <ul class="styled">
+                  <li>Спинка Romeo высотой 125см отделана кристаллами SWAROVSKI.</li>
+                  <li>Выходит за края с каждой стороны кровати.</li>
+                </ul>
+              </div>
+              <div class="span6">
+                <img src="images/banner/good-of-day_08.jpg" alt="" />
+                <p>Основание Qualisom Bords Souples высотой 24см, 100% пружинная поверхность. </p>              
+                <img src="images/banner/good-of-day_12.jpg" alt="" />
+                <p>Основание Qualisom Bords Souples высотой 24см, 100% пружинная поверхность. </p>
+              </div>
+            </div>
+          </div>  
+          <div class="span7">  
+            <div class="banner-descr">
+              <img src="images/banner/good-of-day_03.jpg" alt="" />
+              <div class="banner-text">
+                <h3 class="cfn">Кровать Sleepeezee</h3>
+                <p class="banner-subttl">Серия Irresistible Кристаллы Сваровски</p>
+                <p class="banner-price">Цена: <strong>1 200 000</strong> руб.</p>
+                <p><a href="#" class="banner-buy-link">Купить<span class="icon-next"></span></a></p>
+                <p><a href="#" class="search-link">Подробнее</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="row-fluid">
+          <div class="span5">
+            <div class="row-fluid">
+              <div class="span6">
+                <img src="images/banner/good-of-day_06.jpg" alt="" />
+                <ul class="styled">
+                  <li>Спинка Romeo высотой 125см отделана кристаллами SWAROVSKI.</li>
+                  <li>Выходит за края с каждой стороны кровати.</li>
+                </ul>
+              </div>
+              <div class="span6">
+                <img src="images/banner/good-of-day_08.jpg" alt="" />
+                <p>Основание Qualisom Bords Souples высотой 24см, 100% пружинная поверхность. </p>              
+                <img src="images/banner/good-of-day_12.jpg" alt="" />
+                <p>Основание Qualisom Bords Souples высотой 24см, 100% пружинная поверхность. </p>
+              </div>
+            </div>
+          </div>  
+          <div class="span7">  
+            <div class="banner-descr">
+              <img src="images/banner/good-of-day_03.jpg" alt="" />
+              <div class="banner-text">
+                <h3 class="cfn">Кровать Sleepeezee</h3>
+                <p class="banner-subttl">Серия Irresistible Кристаллы Сваровски</p>
+                <p class="banner-price">Цена: <strong>1 200 000</strong> руб.</p>
+                <p><a href="#" class="banner-buy-link">Купить<span class="icon-next"></span></a></p>
+                <p><a href="#" class="search-link">Подробнее</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      </ul>
+      <div id="btn-next-b"></div><div id="btn-prev-b"></div>
+    </div>
+    <div class="row-fluid">
+      <div class="span3">
+        <h3 class="cfn">BEST SELLERS</h3>
+        <ul class="navbar-side">
+          <li><a href="#">Классические матрасы</a></li>
+          <li><a href="#">Ортопедические матрасы</a></li>
+          <li><a href="#">Детские матрасы</a></li>
+          <li><a href="#">Элитные матрасы</a></li>
+          <li><a href="#">Беспружинные матрасы</a></li>
+          <li><a href="#">Вакуумные матрасы</a></li>
+          <li><a href="#">Матрасы нестандартных размеров</a></li>
+          <li><a href="#">Вакуумные матрасы</a></li>
+          <li><a href="#">Матрасы нестандартных размеров</a></li>
+          <li><a href="#">Классические матрасы</a></li>
+          <li><a href="#">Ортопедические матрасы</a></li>
+          <li><a href="#">Детские матрасы</a></li>
+          <li><a href="#">Элитные матрасы</a></li>
+          <li><a href="#">Беспружинные матрасы</a></li>
+          <li><a href="#">Вакуумные матрасы</a></li>
+          <li><a href="#">Матрасы нестандартных размеров</a></li>
+          <li><a href="#">Классические матрасы</a></li>
+          <li><a href="#">Ортопедические матрасы</a></li>
+          <li><a href="#">Детские матрасы</a></li>
+          <li><a href="#">Элитные матрасы</a></li>
+          <li><a href="#">Беспружинные матрасы</a></li>
+          <li><a href="#">Вакуумные матрасы</a></li>
+          <li><a href="#">Матрасы нестандартных размеров</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+        <div id="main-links">
+          <h3 class="heading cfn">Адреса магазинов</h3>
+          <a href="#"><span class="icon-mp-addr"></span></a>
+          <h3 class="heading cfn">Видео магазина</h3>
+          <a href="#"><span class="icon-mp-video"></span></a>
+        </div>
+        <div id="selection">
+          <ul class="tabs">
+            <li class="ui-tabs-active"><a href="#tab-1">Подбор матраса</a></li>
+          </ul>
+          <div id="tab-1" class="tab-content">
+            <form action="/search">
+              <table class="tbl-options">
+              <tr>
+              	<td width="60%">
+                
+                  <div class="row-fluid">
+                    <div class="span6">
+                      <div class="opt-title">Выбрать размер:</div>
+                      <select name="" id="" >
+                        <option value="0">длина/ширина</option>
+                        <option value="1">1</option>
+                      </select>
+                    </div>
+                    <div class="span6">
+                      <div class="opt-title">Тип:</div>
+                      <select name="" id="" >
+                        <option value="0">взрослый/детский</option>
+                        <option value="1">1</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row-fluid">
+                    <div class="span12">
+                      <div class="hr"></div>
+                      <div class="opt-title">Узнать характеристики:</div>
+                      <select name="" id="" class="medium">
+                        <option value="0">жесткость</option>
+                        <option value="1">1</option>
+                      </select>
+                      <select name="" id="" class="medium">
+                        <option value="0">тип основания</option>
+                        <option value="1">1</option>
+                      </select><br>                
+                      <select name="" id="">
+                        <option value="0">состав</option>
+                      </select>
+                      <select name="" id="">
+                        <option value="0">нагрузка</option>
+                      </select>
+                      <select name="height">
+                        <option value="0" disabled selected>высота</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
+                  </div>
+                </td>
+                <td width="40%">
+                  <div class="row-fluid">
+                    <div class="span12">
+                      <div class="opt-title">Выбрать тип:</div>
+                      <input type="checkbox" /><label for="">вакуумный (в рулоне)</label><br>
+                      <input type="checkbox" /><label for="">ортопедический</label><br>
+                      <input type="checkbox" /><label for="">разная жесткость сторон</label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              </table>
+              <button class="reset">сбросить<span class="icon-reset"></span></button>
+              <button class="submit">подобрать<span class="icon-submit"></span></button>
+            </form>
+          </div>
+        </div>
+        
+        <h3 class="cfn">Производители</h3>
+        <div class="brands">
+          <ul class="carousel clearfix">
+            <li><a href="#"><img src="images/brands/brand_03.gif" alt="" /></a></li>
+            <li><a href="#"><img src="images/brands/brand_05.gif" alt="" /></a></li>
+            <li><a href="#"><img src="images/brands/brand_07.gif" alt="" /></a></li>
+            <li><a href="#"><img src="images/brands/brand_09.gif" alt="" /></a></li>
+            <li><a href="#"><img src="images/brands/brand_11.gif" alt="" /></a></li>
+            <li><a href="#"><img src="images/brands/brand_03.gif" alt="" /></a></li>
+            <li><a href="#"><img src="images/brands/brand_05.gif" alt="" /></a></li>
+            <li><a href="#"><img src="images/brands/brand_07.gif" alt="" /></a></li>
+            <li><a href="#"><img src="images/brands/brand_09.gif" alt="" /></a></li>
+            <li><a href="#"><img src="images/brands/brand_11.gif" alt="" /></a></li>
+          </ul>
+          <div id="btn-next"></div><div id="btn-prev"></div>
+        </div>
+        <div class="related-items">
+          <ul class="tabs tabs-light-bg">
+            <li><a href="#tab-1">Текущие скидки<span class="icon-tab"></span></a></li>
+            <li><a href="#tab-2">Магазин матрасов &laquo;Надо спать&raquo;<span class="icon-tab"></span></a></li>
+            <li><a href="#tab-3">Новости сайта<span class="icon-tab"></span></a></li>
+          </ul>
+          <div id="tab-1" class="tab-content-wf">
+            <div class="text-big text-darken">Текущие скидки на матрасы</div>
+            <ul class="bests clearfix">
+              <li>
+                <a href="#">
+                  <img src="images/nophoto.png" alt="" />
+                  <p class="head-item">ASKONA FITNESS ARENA</p>
+                  <span class="oldprice">от 13 090 р.-</span>
+                  <span class="price">от 10 472 р.-</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/goods/carou_03.jpg" alt="" />
+                  <p class="head-item">ASKONA FITNESS ARENA</p>
+                  <span class="oldprice">от 13 090 р.-</span>
+                  <span class="price">от 10 472 р.-</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/goods/carou_03-02.jpg" alt="" />
+                  <p class="head-item">ASKONA FITNESS ARENA</p>
+                  <span class="oldprice">от 13 090 р.-</span>
+                  <span class="price">от 10 472 р.-</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/goods/carou_03-04.jpg" alt="" />
+                  <p class="head-item">ASKONA FITNESS ARENA</p>
+                  <span class="oldprice">от 13 090 р.-</span>
+                  <span class="price">от 10 472 р.-</span>
+                </a>
+              </li>
+            </ul> 
+            <div class="text-big text-darken">Текущие скидки на подушки</div>
+            <ul class="bests clearfix">
+              <li>
+                <a href="#">
+                  <img src="images/goods/carou_03-03.jpg" alt="" />
+                  <p class="head-item">ASKONA FITNESS ARENA</p>
+                  <span class="oldprice">от 13 090 р.-</span>
+                  <span class="price">от 10 472 р.-</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/goods/carou_03.jpg" alt="" />
+                  <p class="head-item">ASKONA FITNESS ARENA</p>
+                  <span class="oldprice">от 13 090 р.-</span>
+                  <span class="price">от 10 472 р.-</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/goods/carou_03-02.jpg" alt="" />
+                  <p class="head-item">ASKONA FITNESS ARENA</p>
+                  <span class="oldprice">от 13 090 р.-</span>
+                  <span class="price">от 10 472 р.-</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/goods/carou_03-04.jpg" alt="" />
+                  <p class="head-item">ASKONA FITNESS ARENA</p>
+                  <span class="oldprice">от 13 090 р.-</span>
+                  <span class="price">от 10 472 р.-</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div id="tab-2" class="tab-content-wf"></div>
+          <div id="tab-3" class="tab-content-wf"></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- #middle-->
+</div><!-- #wrapper -->
+<div id="footer">
+  <div class="row-fluid">
+    <div class="footer-1st">
+      <div id="copyright">
+        <div id="small-logo"><a href="/"><img src="./images/small-logo.png" alt="" width="83" height="52"></a></div>
+        <div class="copy">&copy; Надо спать &#151; 2013</div>
+      </div>
+    </div>
+    <div class="footer-2nd">
+      <ul class=" navbar navbar-bottom clearfix">
+        <li><a href="/"><span class="icon-howto-b"></span>Как купить</a></li>
+        <li><a href="/"><span class="icon-deli-b"></span>Доставка</a></li>
+        <li><a href="/"><span class="icon-guar-b"></span>Гарантии</a></li>
+        <li><a href="/"><span class="icon-addr-b"></span>Адреса магазинов</a></li>
+      </ul>
+      <ul class="navbar navbar-list text-small">
+        <li><a href="#">Матрасы</a></li>
+        <li><a href="#">Основания</a></li>
+        <li><a href="#">Подушки</a></li>
+        <li><a href="#">Чехлы</a></li>
+        <li><a href="#">Одеяла</a></li>
+        <li><a href="#">Наматрасники</a></li>
+        <li><a href="#">Кровати</a></li>
+        <li><a href="#">Изголовья</a></li>
+      </ul>
+    </div>
+    <div class="footer-3rd">
+      <ul class="navbar navbar-list">
+        <li><a href="#">Вакансии</a></li>
+        <li><a href="#">Сертификаты</a></li>
+        <li><a href="#">Акции</a></li>
+      </ul><div class="clearfix"></div>
+      <ul class="navbar navbar-social">
+        <li><a href="#"><span class="icon-fb-b"></span></a></li>
+        <li><a href="#"><span class="icon-gp-b"></span></a></li>
+        <li><a href="#"><span class="icon-tw-b"></span></a></li>
+        <li><a href="#"><span class="icon-vk-b"></span></a></li>
+      </ul><div class="clearfix"></div>
+      <a href="#">создание сайта</a> студия Webbix, 2011
+    </div>
+  </div>
+</div><!-- #footer --> 
+<div id="dialog-auth">
+  <div class="dialog-title"><span class="icon-auth-big"></span>Авторизация</div>
+  <form action="/">
+    <div class="field">
+      <label>E-mail или телефон:</label>
+      <input type="text" class="x-large" />
+    </div>
+    <div class="field">
+      <label>Пароль:</label>
+      <input type="password" class="x-large" />
+    </div>
+    <div class="field text-right">
+      <button class="btn-cancel" id="link-reg">Регистрация</button>
+      <button class="btn-confirm">Войти<span class="icon-arrow-right"></span></button>
+    </div>
+    <div class="field text-right">
+      <a href="#" id="link-rempass">Восстановить пароль</a>
+    </div>
+  </form>
+</div>
+<div id="dialog-rempass">
+  <div class="dialog-title"><span class="icon-auth-big"></span>Восстановление пароля</div>
+  <p>Введите e-mail, на который будет выслан новый пароль.</p>
+  <form action="/">
+    <div class="field">
+      <label>E-mail:</label>
+      <input type="text" class="x-large" />
+    </div>
+    <div class="field text-right">
+      <button class="btn-confirm">Отправить пароль<span class="icon-arrow-right"></span></button>
+    </div>
+  </form>
+</div>
+<div id="dialog-reg">
+  <div class="dialog-title"><span class="icon-auth-big"></span>Регистрация</div>
+  <form action="/">
+    <div class="field">
+      <label>E-mail или телефон:</label>
+      <input type="text" class="x-large" />
+    </div>
+    <div class="field">
+      <label>Пароль:</label>
+      <input type="password" class="x-large" />
+    </div>
+    <div class="field text-right">
+      <label class="text-small"><span class="text-em">*</span> - поля, обязательные для заполнения</label>
+      <button class="btn-confirm">Зарегистрироваться<span class="icon-arrow-right"></span></button>
+    </div>
+  </form>
+</div>
+<div id="dialog-region">
+  <div class="dialog-title">Выбор региона</div>
+  <ul class="styled">
+  	<li><a href="">Москва</a></li>
+  	<li><a href="">Санкт-Петербург</a></li>
+  </ul>
+  <span class="dialog-arrow"></span>
+</div>
+</body>
+</html>

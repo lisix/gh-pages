@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Надо спать!</title>	
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />	
+  <meta name="viewport" content="width=1000">
+  <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="./js/cfn.js"></script>
+  <script type="text/javascript" src="./js/plugins.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#matrix-mode').on('click',function(){$(this).parent().addClass('matrix-mode');});
+      $('#list-mode').on('click',function(){$(this).parent().removeClass('matrix-mode');});
+      $('.filter').tabs();
+      $('input, select').styler();
+    });
+  </script>
+</head>
+<body>
+<div id="wrapper">
+  <div id="header">
+    <div id="userbar">
+      <span>Регион: <a href="/" id="link-region">Москва</a></span>
+      <span class="phone">Телефоны: <strong>7 (812) 643-23-95;  +7 (812) 643-23-95</strong></span>
+      <span><a href="#">Заказать звонок</a></span>
+      <div class="search">
+        <form action="/search">
+          <button>поиск</button>
+          <input type="text" data-placeholder="найти..." />
+        </form>
+      </div>
+      <div class="basket"><a href="#"><span class="icon-basket"></span>В корзине</a> <strong>(143)</strong></div>     
+    </div>
+    <div id="headerbar">
+      <div id="headerbar-inner">
+        <div id="logo">
+          <a href="/"><img src="./images/logo.png" alt="" width="139" height="84"></a>
+        </div>
+        <div class="navbar navbar-top-2nd">        
+          <ul>
+            <li><a href="/"><span class="icon-matr-t"></span>Матрасы</a></li>
+            <li><a href="/"><span class="icon-bed-t"></span>Кровати</a></li>
+            <li><a href="/"><span class="icon-bedc-t"></span>Постельное белье</a></li>
+            <li><a href="/"><span class="icon-cover-t"></span>Чехлы</a></li>
+            <li><a href="/"><span class="icon-mcover-t"></span>Наматрасники</a></li>
+            <li><a href="/"><span class="icon-pill-t"></span>Подушки</a></li>
+            <li><a href="/"><span class="icon-blank-t"></span>Одеяла</a></li>
+            <li><a href="/"><span class="icon-base-t"></span>Основания</a></li>
+            <li><a href="/"><span class="icon-headb-t"></span>Изголовья</a></li>
+            <li class="spec-item"><a href="/"><span class="icon-forchild-t"></span>Для детей</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul class="navbar navbar-top-3rd">
+      <li class="active"><a href="/">Как купить</a></li>
+      <li><a href="/">Доставка</a></li>
+      <li><a href="/">Гарантии</a></li>
+      <li><a href="/">Адреса магазинов</a></li>
+    </ul><div class="clearfix"></div>
+  </div>
+  <div id="middle">
+    <div class="row-fluid">
+      <div class="span3">
+        <h3 class="cfn">BEST SELLERS</h3>
+        <ul class="navbar-side">
+          <li><a href="#">Классические матрасы</a></li>
+          <li><a href="#">Ортопедические матрасы</a></li>
+          <li><a href="#">Детские матрасы</a></li>
+          <li><a href="#">Элитные матрасы</a></li>
+          <li><a href="#">Беспружинные матрасы</a></li>
+          <li><a href="#">Вакуумные матрасы</a></li>
+          <li><a href="#">Матрасы нестандартных размеров</a></li>
+        </ul>
+        <h3 class="cfn">Производители</h3>
+        <ul class="navbar-side">
+          <li><a href="#">Askona  -20%-40%</a></li>
+          <li><a href="#">Consul  <span class="text-highlight">Акция!</span></a></li>
+          <li><a href="#">Evita  <span class="text-highlight">-20%-50%</span></a></li>
+          <li><a href="#">Hukla</a></li>
+          <li><a href="#">King Koil  <span class="text-highlight">-20%</span></a></li>
+          <li><a href="#">Malie</a></li>
+          <li><a href="#">Mediflex  <span class="text-highlight">-20%</span></a></li>
+          <li><a href="#">Pirelli  <span class="text-highlight">-15%</span></a></li>
+          <li><a href="#">Serta  <span class="text-highlight">-30%</span></a></li>
+          <li><a href="#">Simmons  <span class="text-highlight">- 40%</span></a></li>
+          <li><a href="#">Sleepeezee</a></li>
+          <li><a href="#">Tempur</a></li>
+          <li><a href="#">Орматек  <span class="text-highlight">-30%-50%</span></a></li>           
+        </ul>
+      </div>
+      <div class="span9">
+        <ul class="breadcrumbs clearfix">
+          <li><a href="#">Главная</a><span>/</span></li>
+          <li>Каталог</li>
+        </ul>
+        <div class="filter">
+          <ul class="tabs">
+            <li><a href="#tab-1">Постельное белье<span class="icon-tab"></span></a></li>
+            <li><a href="#tab-2">Матрасы<span class="icon-tab"></span></a></li>
+            <li><a href="#tab-3">Кровати<span class="icon-tab"></span></a></li>
+            <li><a href="#tab-4">Изголовья<span class="icon-tab"></span></a></li>
+          </ul>
+          <div id="tab-1" class="tab-content">
+          <form action="">
+            <table class="tbl-options">
+              <tr>
+              	<td width="25%">
+                  <div class="opt-title">Выбрать размер:</div>
+                  <select name="pillowcase">
+                    <option value="0" disabled selected>наволочка</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <select name="duvet">
+                    <option value="0" disabled selected>пододеяльник</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <select name="bedsheet">
+                    <option value="0" disabled selected>простыня</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </td>
+              	<td width="25%">
+                  <div class="opt-title">Выбрать вид:</div>
+                  <select name="numcolors">
+                    <option value="0" disabled selected>количество цветов</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <select name="theme">
+                    <option value="0" disabled selected>тема рисунка</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <select name="fabric">
+                    <option value="0" disabled selected>материал</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </td>
+              	<td width="50%">
+                  <div class="opt-title">Дополнительные свойства:</div>
+                  <ul class="opt-list">
+                  	<li><input type="checkbox" name="elband" /><label>на резинке</label></li>
+                    <li><input type="checkbox" name="embroidery" /><label>с вышивкой</label></li>
+                    <li><input type="checkbox" name="bedcover" /><label>с покрывалом</label></li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+            <button class="reset">сбросить<span class="icon-reset"></span></button>
+            <button class="submit">подобрать<span class="icon-submit"></span></button>
+          </form>
+          </div>
+          <div id="tab-2" class="tab-content">
+          <form action="">
+            <table class="tbl-options">
+              <tr>
+              	<td width="20%">
+                  <div class="opt-title">Размер и основание:</div>
+                  <select name="size">
+                    <option value="0" disabled selected>длина/ширина</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <select name="type">
+                    <option value="0" disabled selected>тип основания</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <select name="height">
+                    <option value="0" disabled selected>высота</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </td>
+              	<td width="20%">
+                  <div class="opt-title">Характеристики:</div>
+                  <select name="hardness">
+                    <option value="0" disabled selected>жесткость</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <select name="structure">
+                    <option value="0" disabled selected>состав</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <select name="weight">
+                    <option value="0" disabled selected>нагрузка</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </td>
+              	<td width="60%">
+                  <div class="opt-title">Выбрать тип:</div>
+                  <ul class="opt-list">
+                  	<li><input type="checkbox" name="orthopedic" /><label>ортопедический</label></li>
+                    <li><input type="checkbox" name="diffstiff" /><label>разная жесткость сторон</label></li>
+                    <li><input type="checkbox" name="vacuum" /><label>вакуумный (в рулоне)</label></li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+            <button class="reset">сбросить<span class="icon-reset"></span></button>
+            <button class="submit">подобрать<span class="icon-submit"></span></button>
+          </form>
+          </div>
+          <div id="tab-3" class="tab-content">
+          <form action="">
+            <table class="tbl-options">
+              <tr>
+              	<td width="33%">
+                  <div class="opt-title">Выбрать размер:</div>
+                  <select name="length">
+                    <option value="0" disabled selected>длина</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <select name="width">
+                    <option value="0" disabled selected>ширина</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </td>
+              	<td width="33%">
+                  <div class="opt-title">Указать тип:</div>
+                  <select name="bedtype">
+                    <option value="0" disabled selected>тип кровати</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </td>
+              	<td width="33%">
+                  <div class="opt-title">Дополнительные свойства:</div>
+                  <ul class="opt-list full-width">
+                  	<li><input type="checkbox" name="orthopedic" /><label>ортопедическая</label></li>
+                    <li><input type="checkbox" name="laundrybox" /><label>с ящиком для белья</label></li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+            <button class="reset">сбросить<span class="icon-reset"></span></button>
+            <button class="submit">подобрать<span class="icon-submit"></span></button>
+          </form>
+          </div>
+          <div id="tab-4" class="tab-content">
+          <form action="">
+            <table class="tbl-options">
+              <tr>
+              	<td width="65%">
+                  <div class="opt-title">Выбрать размер:</div>
+                  <select name="height">
+                    <option value="0" disabled selected>высота</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <select name="width">
+                    <option value="0" disabled selected>ширина</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </td>
+              	<td width="35%">
+                  <div class="opt-title">Указать тип:</div>
+                  <select name="headboardtype">
+                    <option value="0" disabled selected>тип изголовья</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+            <button class="reset">сбросить<span class="icon-reset"></span></button>
+            <button class="submit">подобрать<span class="icon-submit"></span></button>
+          </form>
+          </div>
+        </div>
+        <div class="pagination pagination-top"> 
+          <div class="display-mode matrix-mode pull-left">
+            <a href="#1" id="matrix-mode"></a>
+            <a href="#2" id="list-mode"></a>
+          </div>
+          <ul class="navbar pull-left">
+            <li>Показывать по:</li>
+            <li class="active"><a href="#">20</a></li>
+            <li><span>|</span><a href="#">50</a></li>
+            <li><span>|</span><a href="#">100</a></li>
+            <li><span>|</span><a href="#"><span>все</span></a></li>
+          </ul><div class="clearfix"></div>
+        </div>
+        <div id="catalog" class="matrix-mode">
+          <div class="item row-fluid">
+            <div class="span4">
+              <div class="img-wrapper">
+                <img src="images/goods/matrix_03.jpg" class="img-item" alt="" />
+                <span class="label-gofday"></span>
+                <span class="label-discount cfn">20%</span>
+              </div>
+              <p class="head-item">ASKONA FITNESS ARENA</p>
+              <ul class="features">
+                <li><strong>Жесткость:</strong>  Выше средней</li>
+                <li><strong>Основание:</strong>  Независимые пружины</li>
+                <li><strong>Нагрузка:</strong>  170 кг</li>
+              </ul>
+              <a href="#" class="buy">Купить</a>
+              <span class="oldprice">от 13 090 р.-</span>
+              <span class="price">от 10 472 р.-</span>
+            </div>
+            <div class="span4">
+              <div class="img-wrapper">
+                <img src="images/goods/matrix_05.jpg" class="img-item" alt="" />
+                <span class="label-gofday"></span>
+              </div>
+              <p class="head-item">ASKONA FITNESS ARENA</p>
+              <ul class="features">
+                <li><strong>Жесткость:</strong>  Выше средней</li>
+                <li><strong>Основание:</strong>  Независимые пружины</li>
+                <li><strong>Нагрузка:</strong>  170 кг</li>
+              </ul>
+              <a href="#" class="buy">Купить</a>
+              <span class="oldprice">от 13 090 р.-</span>
+              <span class="price">от 10 472 р.-</span>
+            </div>
+            <div class="span4">
+              <div class="img-wrapper">
+                <img src="images/goods/matrix_10.jpg" class="img-item" alt="" />
+                <span class="label-discount cfn">20%</span>
+              </div>
+              <p class="head-item">ASKONA FITNESS ARENA</p>
+              <ul class="features">
+                <li><strong>Жесткость:</strong>  Выше средней</li>
+                <li><strong>Основание:</strong>  Независимые пружины</li>
+                <li><strong>Нагрузка:</strong>  170 кг</li>
+              </ul>
+              <a href="#" class="buy">Купить</a>
+              <span class="oldprice">от 13 090 р.-</span>
+              <span class="price">от 10 472 р.-</span>
+            </div>
+          </div>
+          <div class="item row-fluid">
+            <div class="span4">
+              <div class="img-wrapper">
+                <img src="images/goods/matrix_12.jpg" class="img-item" alt="" />
+                <span class="label-gofday"></span>
+              </div>
+              <p class="head-item">ASKONA FITNESS ARENA</p>
+              <ul class="features">
+                <li><strong>Жесткость:</strong>  Выше средней</li>
+                <li><strong>Основание:</strong>  Независимые пружины</li>
+                <li><strong>Нагрузка:</strong>  170 кг</li>
+              </ul>
+              <a href="#" class="buy">Купить</a>
+              <span class="oldprice">от 13 090 р.-</span>
+              <span class="price">от 10 472 р.-</span>
+            </div>
+            <div class="span4">
+              <div class="img-wrapper">
+                <img src="images/goods/matrix_15.jpg" class="img-item" alt="" />
+                <span class="label-gofday"></span>
+              </div>
+              <p class="head-item">ASKONA FITNESS ARENA</p>
+              <ul class="features">
+                <li><strong>Жесткость:</strong>  Выше средней</li>
+                <li><strong>Основание:</strong>  Независимые пружины</li>
+                <li><strong>Нагрузка:</strong>  170 кг</li>
+              </ul>
+              <a href="#" class="buy">Купить</a>
+              <span class="oldprice">от 13 090 р.-</span>
+              <span class="price">от 10 472 р.-</span>
+            </div>
+            <div class="span4">
+              <div class="img-wrapper">
+                <img src="images/goods/matrix_16.jpg" class="img-item" alt="" />
+                <span class="label-gofday"></span>
+              </div>
+              <p class="head-item">ASKONA FITNESS ARENA</p>
+              <ul class="features">
+                <li><strong>Жесткость:</strong>  Выше средней</li>
+                <li><strong>Основание:</strong>  Независимые пружины</li>
+                <li><strong>Нагрузка:</strong>  170 кг</li>
+              </ul>
+              <a href="#" class="buy">Купить</a>
+              <span class="oldprice">от 13 090 р.-</span>
+              <span class="price">от 10 472 р.-</span>
+            </div>
+          </div>
+          <div class="item row-fluid">
+            <div class="span4">
+              <div class="img-wrapper">
+                <img src="images/goods/matrix_03.jpg" class="img-item" alt="" />
+                <span class="label-gofday"></span>
+              </div>
+              <p class="head-item">ASKONA FITNESS ARENA</p>
+              <ul class="features">
+                <li><strong>Жесткость:</strong>  Выше средней</li>
+                <li><strong>Основание:</strong>  Независимые пружины</li>
+                <li><strong>Нагрузка:</strong>  170 кг</li>
+              </ul>
+              <a href="#" class="buy">Купить</a>
+              <span class="oldprice">от 13 090 р.-</span>
+              <span class="price">от 10 472 р.-</span>
+            </div>
+            <div class="span4">
+              <div class="img-wrapper">
+                <img src="images/goods/matrix_05.jpg" class="img-item" alt="" />
+                <span class="label-gofday"></span>
+              </div>
+              <p class="head-item">ASKONA FITNESS ARENA</p>
+              <ul class="features">
+                <li><strong>Жесткость:</strong>  Выше средней</li>
+                <li><strong>Основание:</strong>  Независимые пружины</li>
+                <li><strong>Нагрузка:</strong>  170 кг</li>
+              </ul>
+              <a href="#" class="buy">Купить</a>
+              <span class="oldprice">от 13 090 р.-</span>
+              <span class="price">от 10 472 р.-</span>
+            </div>
+            <div class="span4">
+              <div class="img-wrapper">
+                <img src="images/goods/matrix_10.jpg" class="img-item" alt="" />
+                <span class="label-gofday"></span>
+              </div>
+              <p class="head-item">ASKONA FITNESS ARENA</p>
+              <ul class="features">
+                <li><strong>Жесткость:</strong>  Выше средней</li>
+                <li><strong>Основание:</strong>  Независимые пружины</li>
+                <li><strong>Нагрузка:</strong>  170 кг</li>
+              </ul>
+              <a href="#" class="buy">Купить</a>
+              <span class="oldprice">от 13 090 р.-</span>
+              <span class="price">от 10 472 р.-</span>
+            </div>
+          </div>
+        </div>
+        <div class="pagination pagination-bottom"> 
+          <ul class="navbar pull-left">
+            <li>Показывать по:</li>
+            <li class="active"><a href="#">20</a></li>
+            <li><span>|</span><a href="#">50</a></li>
+            <li><span>|</span><a href="#">100</a></li>
+            <li><span>|</span><a href="#"><span>все</span></a></li>
+          </ul>
+          <ul class="navbar pull-right">
+            <li>Страницы:</li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+            <li><a href="#">...</a></li>
+            <li><span>|</span><a href="#"><span>вперед</span></a></li>
+            <li><span>|</span><a href="#"><span>назад</span></a></li>
+          </ul><div class="clearfix"></div>
+        </div>
+        
+      </div>
+    </div>
+    
+    
+    
+  </div><!-- #middle-->
+</div><!-- #wrapper -->
+<div id="footer">
+  <div class="row-fluid">
+    <div class="footer-1st">
+      <div id="copyright">
+        <div id="small-logo"><a href="/"><img src="./images/small-logo.png" alt="" width="83" height="52"></a></div>
+        <div class="copy">&copy; Надо спать &#151; 2013</div>
+      </div>
+    </div>
+    <div class="footer-2nd">
+      <ul class=" navbar navbar-bottom clearfix">
+        <li><a href="/"><span class="icon-howto-b"></span>Как купить</a></li>
+        <li><a href="/"><span class="icon-deli-b"></span>Доставка</a></li>
+        <li><a href="/"><span class="icon-guar-b"></span>Гарантии</a></li>
+        <li><a href="/"><span class="icon-addr-b"></span>Адреса магазинов</a></li>
+      </ul>
+      <ul class="navbar navbar-list text-small">
+        <li><a href="#">Матрасы</a></li>
+        <li><a href="#">Основания</a></li>
+        <li><a href="#">Подушки</a></li>
+        <li><a href="#">Чехлы</a></li>
+        <li><a href="#">Одеяла</a></li>
+        <li><a href="#">Наматрасники</a></li>
+        <li><a href="#">Кровати</a></li>
+        <li><a href="#">Изголовья</a></li>
+      </ul>
+    </div>
+    <div class="footer-3rd">
+      <ul class="navbar navbar-list">
+        <li><a href="#">Вакансии</a></li>
+        <li><a href="#">Сертификаты</a></li>
+        <li><a href="#">Акции</a></li>
+      </ul><div class="clearfix"></div>
+      <ul class="navbar navbar-social">
+        <li><a href="#"><span class="icon-fb-b"></span></a></li>
+        <li><a href="#"><span class="icon-gp-b"></span></a></li>
+        <li><a href="#"><span class="icon-tw-b"></span></a></li>
+        <li><a href="#"><span class="icon-vk-b"></span></a></li>
+      </ul><div class="clearfix"></div>
+      <a href="#">создание сайта</a> студия Webbix, 2011
+    </div>
+  </div>
+</div><!-- #footer --> 
+</body>
+</html>
