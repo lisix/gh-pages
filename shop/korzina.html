@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Надо спать!</title>	
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />	
+  <meta name="viewport" content="width=1000">
+  <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="./js/cfn.js"></script>
+  <script type="text/javascript" src="./js/plugins.js"></script> 
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('input, select').styler();
+      $('.table tr').filter(":odd").addClass('odd');
+      $('.carousel').carouFredSel({circular: false,infinite: false, auto:false,width:680,items:{width: 160},prev: {button: "#btn-prev",key: "left"},next: {button: "#btn-next",key: "right"} });
+    });
+  </script>
+</head>
+<body>
+<div id="wrapper">
+  <div id="header">
+    <div id="userbar">
+      <span>Регион: <a href="/" id="link-region">Москва</a></span>
+      <span class="phone">Телефоны: <strong>7 (812) 643-23-95;  +7 (812) 643-23-95</strong></span>
+      <span><a href="#">Заказать звонок</a></span>
+      <div class="search">
+        <form action="/search">
+          <button>поиск</button>
+          <input type="text" data-placeholder="найти..." />
+        </form>
+      </div>
+      <div class="basket"><a href="#"><span class="icon-basket"></span>В корзине</a> <strong>(143)</strong></div>     
+    </div>
+    <div id="headerbar">
+      <div id="headerbar-inner">
+        <div id="logo">
+          <a href="/"><img src="./images/logo.png" alt="" width="139" height="84"></a>
+        </div>
+        <div class="navbar navbar-top-2nd">        
+          <ul>
+            <li><a href="/"><span class="icon-matr-t"></span>Матрасы</a></li>
+            <li><a href="/"><span class="icon-bed-t"></span>Кровати</a></li>
+            <li><a href="/"><span class="icon-bedc-t"></span>Постельное белье</a></li>
+            <li><a href="/"><span class="icon-cover-t"></span>Чехлы</a></li>
+            <li><a href="/"><span class="icon-mcover-t"></span>Наматрасники</a></li>
+            <li><a href="/"><span class="icon-pill-t"></span>Подушки</a></li>
+            <li><a href="/"><span class="icon-blank-t"></span>Одеяла</a></li>
+            <li><a href="/"><span class="icon-base-t"></span>Основания</a></li>
+            <li><a href="/"><span class="icon-headb-t"></span>Изголовья</a></li>
+            <li class="spec-item"><a href="/"><span class="icon-forchild-t"></span>Для детей</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul class="navbar navbar-top-3rd">
+      <li class="active"><a href="/">Как купить</a></li>
+      <li><a href="/">Доставка</a></li>
+      <li><a href="/">Гарантии</a></li>
+      <li><a href="/">Адреса магазинов</a></li>
+    </ul><div class="clearfix"></div>
+  </div>
+  <div id="middle">
+    <div class="row-fluid">
+      <div class="span3">
+        <h3 class="cfn">BEST SELLERS</h3>
+        <ul class="navbar-side">
+          <li><a href="#">Классические матрасы</a></li>
+          <li><a href="#">Ортопедические матрасы</a></li>
+          <li><a href="#">Детские матрасы</a></li>
+          <li><a href="#">Элитные матрасы</a></li>
+          <li><a href="#">Беспружинные матрасы</a></li>
+          <li><a href="#">Вакуумные матрасы</a></li>
+          <li><a href="#">Матрасы нестандартных размеров</a></li>
+        </ul>
+        <h3 class="cfn">Производители</h3>
+        <ul class="navbar-side">
+          <li><a href="#">Askona  -20%-40%</a></li>
+          <li><a href="#">Consul  <span class="text-highlight">Акция!</span></a></li>
+          <li><a href="#">Evita  <span class="text-highlight">-20%-50%</span></a></li>
+          <li><a href="#">Hukla</a></li>
+          <li><a href="#">King Koil  <span class="text-highlight">-20%</span></a></li>
+          <li><a href="#">Malie</a></li>
+          <li><a href="#">Mediflex  <span class="text-highlight">-20%</span></a></li>
+          <li><a href="#">Pirelli  <span class="text-highlight">-15%</span></a></li>
+          <li><a href="#">Serta  <span class="text-highlight">-30%</span></a></li>
+          <li><a href="#">Simmons  <span class="text-highlight">- 40%</span></a></li>
+          <li><a href="#">Sleepeezee</a></li>
+          <li><a href="#">Tempur</a></li>
+          <li><a href="#">Орматек  <span class="text-highlight">-30%-50%</span></a></li>           
+        </ul>
+      </div>
+      <div class="span9">
+        <ul class="breadcrumbs clearfix">
+          <li><a href="#">Главная</a><span>/</span></li>
+          <li>Корзина</li>
+        </ul>
+        
+        
+        <form action="">
+          <table class="table">
+          <thead>
+            <tr>
+              <th width="5%">№</th>
+              <th width="14%">Фото товара</th>
+              <th width="27%">Название</th>
+              <th width="17%">Параметры (см)</th>
+              <th width="15%">Стоимость</th>
+              <th width="11%">Количество</th>
+              <th width="11%">Удалить</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><img src="images/goods/korzina_03.jpg" class="img-item" alt="" /></td>
+              <td><a href="#">Evita Grand</a></td>
+              <td>100x100x30</td>
+              <td>2 300 руб</td>
+              <td><input type="text" name="quantity" value="1" class="x-small" /></td>
+              <td><button class="btn-serv">Удалить</button></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><img src="images/goods/korzina_06.jpg" class="img-item" alt="" /></td>
+              <td><a href="#">Evita Grand</a></td>
+              <td>100x100x30</td>
+              <td>2 300 руб</td>
+              <td><input type="text" name="quantity" value="1" class="x-small" /></td>
+              <td><button class="btn-serv">Удалить</button></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><img src="images/goods/korzina_08.jpg" class="img-item" alt="" /></td>
+              <td><a href="#">Sleepeezee Crepuscule Ferme Слипизи Крепускуле Ферме</a></td>
+              <td>100x100x30</td>
+              <td>2 300 руб</td>
+              <td><input type="text" name="quantity" value="1" class="x-small" /></td>
+              <td><button class="btn-serv">Удалить</button></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><img src="images/goods/korzina_10.jpg" class="img-item" alt="" /></td>
+              <td><a href="#">Evita Baby Quiet Nights</a></td>
+              <td>100x100x30</td>
+              <td>2 300 руб</td>
+              <td><input type="text" name="quantity" value="1" class="x-small" /></td>
+              <td><button class="btn-serv">Удалить</button></td>
+            </tr>
+          </tbody>
+          </table>
+          <div class="check-sum">
+            <label>Введите код с купона:</label>
+            <input class="x-medium" type="text" name="promo" value="1638662345" />
+            <div class="pull-right">
+              <label>Итоговая стоимость:</label>  
+              <span class="price inline">123 230 566 руб.</span>
+            </div>
+          </div>
+          <div class="text-right">
+            <button class="btn-cancel">Пересчитать<span class="icon-arrow-right"></span></button>
+            <button class="btn-confirm">Оформить<span class="icon-arrow-right"></span></button>
+          </div>
+        </form>
+        
+        <div class="related-items">
+          <ul class="tabs">
+            <li class="ui-tabs-active"><a href="#tab-1">Сопутствующие товары</a></li>
+          </ul>
+          <div id="tab-1" class="tab-content-wf">
+            <ul class="carousel">
+              <li>
+                <a href="#">
+                  <img src="images/goods/carou_03-03.jpg" alt="" />
+                  <span class="label-gofday"></span>
+                  <p class="head-item">ASKONA FITNESS ARENA</p>
+                  <span class="oldprice">от 13 090 р.-</span>
+                  <span class="price">от 10 472 р.-</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/goods/carou_03.jpg" alt="" />
+                  <span class="label-gofday"></span>
+                  <p class="head-item">ASKONA FITNESS ARENA</p>
+                  <span class="oldprice">от 13 090 р.-</span>
+                  <span class="price">от 10 472 р.-</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/goods/carou_03-02.jpg" alt="" />
+                  <span class="label-gofday"></span>
+                  <p class="head-item">ASKONA FITNESS ARENA</p>
+                  <span class="oldprice">от 13 090 р.-</span>
+                  <span class="price">от 10 472 р.-</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="images/goods/carou_03-04.jpg" alt="" />
+                  <span class="label-gofday"></span>
+                  <p class="head-item">ASKONA FITNESS ARENA</p>
+                  <span class="oldprice">от 13 090 р.-</span>
+                  <span class="price">от 10 472 р.-</span>
+                </a>
+              </li>
+              <li>
+                  <img src="images/goods/carou_03-03.jpg" alt="" />
+                  <span class="label-gofday"></span>
+                  <p class="head-item">ASKONA FITNESS ARENA</p>
+                  <span class="oldprice">от 13 090 р.-</span>
+                  <span class="price">от 10 472 р.-</span>
+              </li>
+              <li>
+                  <img src="images/goods/carou_03.jpg" alt="" />
+                  <span class="label-gofday"></span>
+                  <p class="head-item">ASKONA FITNESS ARENA</p>
+                  <span class="oldprice">от 13 090 р.-</span>
+                  <span class="price">от 10 472 р.-</span>
+              </li>
+              <li>
+                  <img src="images/goods/carou_03-02.jpg" alt="" />
+                  <span class="label-gofday"></span>
+                  <p class="head-item">ASKONA FITNESS ARENA</p>
+                  <span class="oldprice">от 13 090 р.-</span>
+                  <span class="price">от 10 472 р.-</span>
+              </li>
+              <li>
+                  <img src="images/goods/carou_03-04.jpg" alt="" />
+                  <span class="label-gofday"></span>
+                  <p class="head-item">ASKONA FITNESS ARENA</p>
+                  <span class="oldprice">от 13 090 р.-</span>
+                  <span class="price">от 10 472 р.-</span>
+              </li>
+            </ul> 
+            <div id="btn-next"></div><div id="btn-prev"></div>
+          </div>
+        </div>        
+      </div>
+    </div>
+    
+    
+    
+  </div><!-- #middle-->
+</div><!-- #wrapper -->
+<div id="footer">
+  <div class="row-fluid">
+    <div class="footer-1st">
+      <div id="copyright">
+        <div id="small-logo"><a href="/"><img src="./images/small-logo.png" alt="" width="83" height="52"></a></div>
+        <div class="copy">&copy; Надо спать &#151; 2013</div>
+      </div>
+    </div>
+    <div class="footer-2nd">
+      <ul class=" navbar navbar-bottom clearfix">
+        <li><a href="/"><span class="icon-howto-b"></span>Как купить</a></li>
+        <li><a href="/"><span class="icon-deli-b"></span>Доставка</a></li>
+        <li><a href="/"><span class="icon-guar-b"></span>Гарантии</a></li>
+        <li><a href="/"><span class="icon-addr-b"></span>Адреса магазинов</a></li>
+      </ul>
+      <ul class="navbar navbar-list text-small">
+        <li><a href="#">Матрасы</a></li>
+        <li><a href="#">Основания</a></li>
+        <li><a href="#">Подушки</a></li>
+        <li><a href="#">Чехлы</a></li>
+        <li><a href="#">Одеяла</a></li>
+        <li><a href="#">Наматрасники</a></li>
+        <li><a href="#">Кровати</a></li>
+        <li><a href="#">Изголовья</a></li>
+      </ul>
+    </div>
+    <div class="footer-3rd">
+      <ul class="navbar navbar-list">
+        <li><a href="#">Вакансии</a></li>
+        <li><a href="#">Сертификаты</a></li>
+        <li><a href="#">Акции</a></li>
+      </ul><div class="clearfix"></div>
+      <ul class="navbar navbar-social">
+        <li><a href="#"><span class="icon-fb-b"></span></a></li>
+        <li><a href="#"><span class="icon-gp-b"></span></a></li>
+        <li><a href="#"><span class="icon-tw-b"></span></a></li>
+        <li><a href="#"><span class="icon-vk-b"></span></a></li>
+      </ul><div class="clearfix"></div>
+      <a href="#">создание сайта</a> студия Webbix, 2011
+    </div>
+  </div>
+</div><!-- #footer --> 
+</body>
+</html>

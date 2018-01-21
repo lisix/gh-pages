@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Надо спать!</title>	
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />	
+  <meta name="viewport" content="width=1000">
+  <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="./js/cfn.js"></script>
+  <script type="text/javascript" src="./js/plugins.js"></script> 
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.related-items-wide').tabs();
+      $('.carousel').carouFredSel({circular: false,infinite: false, auto:false,width:840,items:{width: 160},prev: {button: "#btn-prev"},next: {button: "#btn-next"} });
+      $('.big-imgs-list').carouFredSel({circular: false,infinite: false, auto:false,width:508,height:328,items:{width: 507,height:327},prev: {button: "#btn-prev-p"},next: {button: "#btn-next-p"} });
+      $('input, select').styler();
+      $('.label-zoom').on('click',function(){$('.group1').colorbox({rel:'group1',transition:'fade',open: true});});
+      $('.group1').colorbox({rel:'group1',transition:'elastic',current:'&nbsp;изображение {current} из {total}'});
+      $('#link-descr').on('click',function(e){e.preventDefault();
+        $('#dialog-descr').dialog({width: 650,modal: true, position:{of:$('#product-opt'),my: "left top", at: "left+30 top-100" }});
+        $('.ui-widget-overlay').css({'width':'1000px','left':$('#middle').offset().left});
+      });
+      $('#link-options').on('click',function(e){e.preventDefault();
+        $('#dialog-options').dialog({width: 360,modal: true, position:{of:$('#product-opt'),my: "left top", at: "left+30 top-100" }});
+        $('.ui-widget-overlay').css({'width':'1000px','left':$('#middle').offset().left});
+      });
+      $(window).resize(function(){$('.ui-widget-overlay').css({'left':$('#middle').offset().left});});
+
+      $('.user-rating').on('mousemove',function(e){
+        var offs = $(this).offset().left;
+        var rX = (e.pageX - offs);
+        var num = Math.ceil(rX/12);
+        var cls = 'r' + num;
+        $(this).removeClass('r0 r1 r2 r3 r4 r5').addClass(cls);
+        $(this).on('mouseout',function(cls){$(this).removeClass(cls);});
+        $(this).on('click',function(){$(this).unbind('mouseout');$('input[name=rating]').val(num);});
+      });
+    });
+  </script>
+</head>
+<body>
+<div id="wrapper">
+  <div id="header">
+    <div id="userbar">
+      <span>Регион: <a href="/" id="link-region">Москва</a></span>
+      <span class="phone">Телефоны: <strong>7 (812) 643-23-95;  +7 (812) 643-23-95</strong></span>
+      <span><a href="#">Заказать звонок</a></span>
+      <div class="search">
+        <form action="/search">
+          <button>поиск</button>
+          <input type="text" data-placeholder="найти..." />
+        </form>
+      </div>
+      <div class="basket"><a href="#"><span class="icon-basket"></span>В корзине</a> <strong>(143)</strong></div>     
+    </div>
+    <div id="headerbar">
+      <div id="headerbar-inner">
+        <div id="logo">
+          <a href="/"><img src="./images/logo.png" alt="" width="139" height="84"></a>
+        </div>
+        <div class="navbar navbar-top-2nd">        
+          <ul>
+            <li><a href="/"><span class="icon-matr-t"></span>Матрасы</a></li>
+            <li><a href="/"><span class="icon-bed-t"></span>Кровати</a></li>
+            <li><a href="/"><span class="icon-bedc-t"></span>Постельное белье</a></li>
+            <li><a href="/"><span class="icon-cover-t"></span>Чехлы</a></li>
+            <li><a href="/"><span class="icon-mcover-t"></span>Наматрасники</a></li>
+            <li><a href="/"><span class="icon-pill-t"></span>Подушки</a></li>
+            <li><a href="/"><span class="icon-blank-t"></span>Одеяла</a></li>
+            <li><a href="/"><span class="icon-base-t"></span>Основания</a></li>
+            <li><a href="/"><span class="icon-headb-t"></span>Изголовья</a></li>
+            <li class="spec-item"><a href="/"><span class="icon-forchild-t"></span>Для детей</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul class="navbar navbar-top-3rd">
+      <li class="active"><a href="/">Как купить</a></li>
+      <li><a href="/">Доставка</a></li>
+      <li><a href="/">Гарантии</a></li>
+      <li><a href="/">Адреса магазинов</a></li>
+    </ul><div class="clearfix"></div>
+  </div>
+  <div id="middle">
+    <div class="row-fluid">
+      <div class="span12">
+        <ul class="breadcrumbs clearfix">
+          <li><a href="#">Каталог</a><span>/</span></li>
+          <li><a href="#">Матрасы</a><span>/</span></li>
+          <li><a href="#">Пружинные матрасы</a><span>/</span></li>
+          <li>SERTA ARCADIA</li>
+        </ul>
+        <div class="row-fluid" id="product">
+          <div class="row-fluid">
+            <h1>SERTA ARCADIA ВТОРАЯ СТРОЧК ВТОРАЯ СТРОЧКА</h1>
+          </div>
+          <div class="row-fluid">
+            <div class="span7">
+              <div class="img-wrapper">
+                <div class="big-imgs-list-wrapper">
+                  <ul class="big-imgs-list">
+                    <li><a class="group1" href="images/goods/product_03-1.jpg" title="SERTA ARCADIA"><img src="images/goods/product_03.jpg" width="506" height="326" alt="" /></a></li>
+                    <li><a class="group1" href="images/goods/product_03-2.jpg" title="SERTA ARCADIA"><img src="images/goods/product_03.jpg" width="506" height="326" alt="" /></a></li>
+                    <li><a class="group1" href="images/goods/product_03-3.jpg" title="SERTA ARCADIA"><img src="images/goods/product_03.jpg" width="506" height="326" alt="" /></a></li>
+                  </ul>
+                </div>
+                <span class="label-gofday"></span>
+                <span class="label-discount cfn">30%</span>
+                <span class="label-zoom"></span>
+                <div id="btn-prev-p"></div><div id="btn-next-p"></div>
+              </div> 
+              <ul class="small-imgs-list">
+                <li><img src="images/goods/product_07-03.jpg" class="img-item" width="105" height="60" alt="" /></li>
+                <li><img src="images/goods/product_07-04.jpg" class="img-item" width="105" height="60" alt="" /></li>
+                <li><img src="images/goods/product_07-05.jpg" class="img-item" width="105" height="60" alt="" /></li>
+                <li><img src="images/goods/product_07.jpg" class="img-item" width="105" height="60" alt="" /></li>
+              </ul>   
+            </div>
+            <div class="span5">
+              <div class="opt-block"><span class="product-heading">Выбрать размер:</span>
+                <select name="size">
+                  <option value="0" disabled selected>длина/ширина</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div class="opt-block">
+                <div class="row-fluid">
+                  <div class="span3 tbl-cell">
+                    <div class="product-heading">Цена:</div>
+                  </div>
+                  <div class="span9 tbl-cell">
+                    <div class="oldprice">21 116 р.-</div>
+                    <div class="price">16 285 р.-</div>
+                  </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span4"><label>Кол-во</label> <input type="text" class="xx-small" value="2" /> шт</div>
+                    <div class="span4"><a href="#" class="buy">Купить<span class="icon-basket"></span></a></div>
+                    <div class="span4"><a href="#" class="compare">Сравнить<span class="icon-eye"></span></a> </div>    
+                </div>
+              </div>
+              <div class="opt-block">
+                <div class="row-fluid">
+                  <div class="span5">
+                    <div class="product-heading">В рассрочку <br>на 24 месяца:</div>
+                  </div>
+                  <div class="span7">
+                    <div class="price">6 285 р.-</div>
+                  </div>
+                </div>
+              </div>
+              <div class="opt-block">
+                <div>
+                  <span class="product-heading">Рейтинг:</span><span class="product-rating p4"></span>
+                  <span>(<a href="#" class="comment-link">Отзывов 3</a>)</span>
+                </div>
+                <div><a href="#" class="search-link">Наличие в магазинах<span class="icon-arrow-yell"></span></a></div>
+              </div>
+              <div class="opt-block">
+                <p><a href="#" class="search-link">Подробнее об акции</a></p>
+                <div class="specblock">До конца акции осталось:   <span>123 д. : 22 ч. : 55 мин.</span> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row-fluid">
+        	<div class="span12">
+            <div class="related-items-wide">
+              <ul class="tabs tabs-light-bg">
+                <li><a href="#tab-1">Сопутствующие товары<span class="icon-tab"></span></a></li>
+                <li><a href="#tab-2">Чехлы<span class="icon-tab"></span></a></li>
+                <li><a href="#tab-3">Постельное белье<span class="icon-tab"></span></a></li>
+                <li><a href="#tab-4">Подушки<span class="icon-tab"></span></a></li>
+              </ul>
+              <div id="tab-1" class="tab-content-wf">
+                <ul class="carousel clearfix">
+                  <li>
+                    <a href="#">
+                      <img src="images/goods/carou_03-03.jpg" alt="" />
+                      <p class="head-item">ASKONA FITNESS ARENA</p>
+                      <span class="oldprice">от 13 090 р.-</span>
+                      <span class="price">от 10 472 р.-</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="images/goods/carou_03.jpg" alt="" />
+                      <p class="head-item">ASKONA FITNESS ARENA</p>
+                      <span class="oldprice">от 13 090 р.-</span>
+                      <span class="price">от 10 472 р.-</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="images/goods/carou_03-02.jpg" alt="" />
+                      <p class="head-item">ASKONA FITNESS ARENA</p>
+                      <span class="oldprice">от 13 090 р.-</span>
+                      <span class="price">от 10 472 р.-</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="images/goods/carou_03-04.jpg" alt="" />
+                      <p class="head-item">ASKONA FITNESS ARENA</p>
+                      <span class="oldprice">от 13 090 р.-</span>
+                      <span class="price">от 10 472 р.-</span>
+                    </a>
+                  </li>
+                  <li>
+                      <img src="images/goods/carou_03-03.jpg" alt="" />
+                      <p class="head-item">ASKONA FITNESS ARENA</p>
+                      <span class="oldprice">от 13 090 р.-</span>
+                      <span class="price">от 10 472 р.-</span>
+                  </li>
+                  <li>
+                      <img src="images/goods/carou_03.jpg" alt="" />
+                      <p class="head-item">ASKONA FITNESS ARENA</p>
+                      <span class="oldprice">от 13 090 р.-</span>
+                      <span class="price">от 10 472 р.-</span>
+                  </li>
+                  <li>
+                      <img src="images/goods/carou_03-02.jpg" alt="" />
+                      <p class="head-item">ASKONA FITNESS ARENA</p>
+                      <span class="oldprice">от 13 090 р.-</span>
+                      <span class="price">от 10 472 р.-</span>
+                  </li>
+                  <li>
+                      <img src="images/goods/carou_03-04.jpg" alt="" />
+                      <p class="head-item">ASKONA FITNESS ARENA</p>
+                      <span class="oldprice">от 13 090 р.-</span>
+                      <span class="price">от 10 472 р.-</span>
+                  </li>
+                </ul> 
+                <div id="btn-next"></div><div id="btn-prev"></div>
+              </div>
+              <div id="tab-2" class="tab-content-wf">&nbsp;
+              
+              </div>
+              <div id="tab-3" class="tab-content-wf">&nbsp;
+              
+              </div>
+              <div id="tab-4" class="tab-content-wf">&nbsp;
+              
+              </div>
+            </div>  
+          </div>
+        </div>
+        <div class="row-fluid" id="product-opt">
+          <div class="span4">
+            <p class="product-heading">Технические характеристики:</p>
+            <ul class="styled-nomarker">
+              <li><strong>Тип основания:</strong>  Независимые пружины</li>
+              <li><strong>Жесткость:</strong>  Средняя</li>
+              <li><strong>Высота:</strong>  20см</li>
+              <li><strong>Нагрузка:</strong>  140 кг</li>
+              <li><strong>Производитель:</strong>  Serta</li>
+              <li><strong>Состав:</strong>  Латекс, Искусственный латекс, Без кокоса</li>
+              <li><strong>Ортопедический:</strong>  Да</li>
+            </ul>
+            <p><a href="#" class="search-link-2" id="link-options">все характеристики</a><span class="icon-add"></span></p>
+            <div id="dialog-options">
+              <div class="dialog-title">Технические характеристики:</div>
+              <ul class="styled-nomarker">
+                <li><strong>Тип основания:</strong>  Независимые пружины</li>
+                <li><strong>Жесткость:</strong>  Средняя</li>
+                <li><strong>Высота:</strong>  20см</li>
+                <li><strong>Нагрузка:</strong>  140 кг</li>
+                <li><strong>Производитель:</strong>  Serta</li>
+                <li><strong>Состав:</strong>  Латекс, Искусственный латекс, Без кокоса</li>
+                <li><strong>Ортопедический:</strong>  Да</li>
+              </ul>
+              <span class="dialog-arrow"></span>
+            </div>
+          </div>
+          <div class="span8">
+            <p class="product-heading">Описание товара:</p>
+            <p>Американская компания Serta – самый известный в мире производитель матрасов. Вот уже на протяжении 75 лет наш девиз: «Мы делаем лучшие матрасы в мире». Он и вдохновляет на создание новых коллекция матрасов. В прошлом, настоящем, будущем Serta – эталон настоящего матраса. Мы стремимся сочетать лучшие природные материалы и передовые технологии: именно поэтому миллионы людей по всему миру спят комфортно.</p>
+            <p>Мы стремимся сочетать лучшие природные материалы и передовые технологии: именно поэтому миллионы людей по всему миру спят комфортно.Мы стремимся сочетать лучшие природные материалы и передовые технологии: именно поэтому миллионы людей по всему миру спят комфортно. </p>
+            <p><a href="#" class="search-link-2" id="link-descr">подробное описание</a><span class="icon-add"></span></p>
+            <div id="dialog-descr">
+              <div class="dialog-title">Описание товара:</div>
+              <p>Американская компания Serta – самый известный в мире производитель матрасов. Вот уже на протяжении 75 лет наш девиз: «Мы делаем лучшие матрасы в мире». Он и вдохновляет на создание новых коллекция матрасов. В прошлом, настоящем, будущем Serta – эталон настоящего матраса. Мы стремимся сочетать лучшие природные материалы и передовые технологии: именно поэтому миллионы людей по всему миру спят комфортно.</p>
+              <p>Мы стремимся сочетать лучшие природные материалы и передовые технологии: именно поэтому миллионы людей по всему миру спят комфортно.Мы стремимся сочетать лучшие природные материалы и передовые технологии: именно поэтому миллионы людей по всему миру спят комфортно. </p>
+              <p>Американская компания Serta – самый известный в мире производитель матрасов. Вот уже на протяжении 75 лет наш девиз: «Мы делаем лучшие матрасы в мире». Он и вдохновляет на создание новых коллекция матрасов. В прошлом, настоящем, будущем Serta – эталон настоящего матраса. Мы стремимся сочетать лучшие природные материалы и передовые технологии: именно поэтому миллионы людей по всему миру спят комфортно.</p>
+              <p>Мы стремимся сочетать лучшие природные материалы и передовые технологии: именно поэтому миллионы людей по всему миру спят комфортно.Мы стремимся сочетать лучшие природные материалы и передовые технологии: именно поэтому миллионы людей по всему миру спят комфортно. </p>
+              <p>Американская компания Serta – самый известный в мире производитель матрасов. Вот уже на протяжении 75 лет наш девиз: «Мы делаем лучшие матрасы в мире». Он и вдохновляет на создание новых коллекция матрасов. В прошлом, настоящем, будущем Serta – эталон настоящего матраса. Мы стремимся сочетать лучшие природные материалы и передовые технологии: именно поэтому миллионы людей по всему миру спят комфортно.</p>
+              <p>Мы стремимся сочетать лучшие природные материалы и передовые технологии: именно поэтому миллионы людей по всему миру спят комфортно.Мы стремимся сочетать лучшие природные материалы и передовые технологии: именно поэтому миллионы людей по всему миру спят комфортно. </p>
+              <span class="dialog-arrow"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row-fluid">
+          <div class="span12">
+            <p><a href="#" class="search-link"><span class="icon-print"></span>распечатать страницу</a></p>
+          </div>
+        </div>
+        <div class="row-fluid" id="comments">
+          <div class="span6">
+            <div class="static-tbl">
+              <div class="tbl-heading">Отзывы (3)</div>
+              <div class="tbl-content">
+                <div class="tbl-row">
+                  <div class="user-rating r4"></div>
+                  <p><strong>Константинов Констант</strong>, 16.03.2013</p>
+                  <p>Как купил матрас я сей, сразу захотелось на нем спать. Замечательный матрас! Американская компания Serta – самый известный в мире производитель матрасов. Вот уже на протяжении 75 лет наш девиз: «Мы делаем лучшие матрасы в мире». Как купил матрас я сей, сразу захотелось на нем спать. Замечательный матрас!  </p>
+                </div>
+                <div class="tbl-row">
+                  <div class="user-rating r3"></div>
+                  <p><strong>Константинов Констант</strong>, 16.03.2013</p>
+                  <p>Американская компания Serta – самый известный в мире производитель матрасов. </p>
+                </div>
+              </div>
+              <div class="tbl-footer text-right">
+                <a href="">Прочитать все отзывы<span class="icon-arrow-gray"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="span6">
+            <div class="action-tbl">
+              <div class="tbl-heading">Оставить свой отзыв</div>
+              <div class="tbl-content">
+                <form action="">
+                  <div class="field">
+                    <label><strong>Имя:</strong></label><input type="text" class="xx-large" name="firstname" value="Марина" />
+                  </div>
+                  <div class="field">
+                    <label><strong>E-mail:</strong></label><input type="text" class="xx-large" name="email" />
+                  </div>
+                  <div class="field">
+                    <label><strong>Оценка:</strong></label><div class="user-rating r5" id="rating"></div><input type="hidden" name="rating" value="" />
+                  </div>
+                  <div class="field">
+                    <label><strong>Отзыв:</strong></label><textarea name="comment" class="xx-large" rows="4"></textarea>
+                  </div>
+                  <div class="filed text-right">
+                    <button class="btn-cancel-2">Очистить</button>
+                    <button class="btn-confirm">Отправить</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+  </div><!-- #middle-->
+</div><!-- #wrapper -->
+<div id="footer">
+  <div class="row-fluid">
+    <div class="footer-1st">
+      <div id="copyright">
+        <div id="small-logo"><a href="/"><img src="./images/small-logo.png" alt="" width="83" height="52"></a></div>
+        <div class="copy">&copy; Надо спать &#151; 2013</div>
+      </div>
+    </div>
+    <div class="footer-2nd">
+      <ul class=" navbar navbar-bottom clearfix">
+        <li><a href="/"><span class="icon-howto-b"></span>Как купить</a></li>
+        <li><a href="/"><span class="icon-deli-b"></span>Доставка</a></li>
+        <li><a href="/"><span class="icon-guar-b"></span>Гарантии</a></li>
+        <li><a href="/"><span class="icon-addr-b"></span>Адреса магазинов</a></li>
+      </ul>
+      <ul class="navbar navbar-list text-small">
+        <li><a href="#">Матрасы</a></li>
+        <li><a href="#">Основания</a></li>
+        <li><a href="#">Подушки</a></li>
+        <li><a href="#">Чехлы</a></li>
+        <li><a href="#">Одеяла</a></li>
+        <li><a href="#">Наматрасники</a></li>
+        <li><a href="#">Кровати</a></li>
+        <li><a href="#">Изголовья</a></li>
+      </ul>
+    </div>
+    <div class="footer-3rd">
+      <ul class="navbar navbar-list">
+        <li><a href="#">Вакансии</a></li>
+        <li><a href="#">Сертификаты</a></li>
+        <li><a href="#">Акции</a></li>
+      </ul><div class="clearfix"></div>
+      <ul class="navbar navbar-social">
+        <li><a href="#"><span class="icon-fb-b"></span></a></li>
+        <li><a href="#"><span class="icon-gp-b"></span></a></li>
+        <li><a href="#"><span class="icon-tw-b"></span></a></li>
+        <li><a href="#"><span class="icon-vk-b"></span></a></li>
+      </ul><div class="clearfix"></div>
+      <a href="#">создание сайта</a> студия Webbix, 2011
+    </div>
+  </div>
+</div><!-- #footer --> 
+</body>
+</html>

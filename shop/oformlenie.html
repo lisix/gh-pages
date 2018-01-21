@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Надо спать!</title>	
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />	
+  <meta name="viewport" content="width=1000">
+  <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="./js/cfn.js"></script>
+  <script type="text/javascript" src="./js/plugins.js"></script> 
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#checkout').tabs();
+      $('input, select').styler();
+      $('.carousel').carouFredSel({auto:false,width:680,items:{width: 170}});
+      $(".selectable li").on('click',function(e){e.preventDefault();$(this).toggleClass('selected').find('input').val(function(){return ($(this).val()==1)?0:1;});});
+      $(".selectable li").hover(function(){$(this).find('.bubble').show().position({of: $(this), my: "left-11 bottom", at: "left top-15" });},function(){$(this).find('.bubble').hide();});
+    });
+  </script>
+</head>
+<body>
+<div id="wrapper">
+  <div id="header">
+    <div id="userbar">
+      <span>Регион: <a href="/" id="link-region">Москва</a></span>
+      <span class="phone">Телефоны: <strong>7 (812) 643-23-95;  +7 (812) 643-23-95</strong></span>
+      <span><a href="#">Заказать звонок</a></span>
+      <div class="search">
+        <form action="/search">
+          <button>поиск</button>
+          <input type="text" data-placeholder="найти..." />
+        </form>
+      </div>
+      <div class="basket"><a href="#"><span class="icon-basket"></span>В корзине</a> <strong>(143)</strong></div>     
+    </div>
+    <div id="headerbar">
+      <div id="headerbar-inner">
+        <div id="logo">
+          <a href="/"><img src="./images/logo.png" alt="" width="139" height="84"></a>
+        </div>
+        <div class="navbar navbar-top-2nd">        
+          <ul>
+            <li><a href="/"><span class="icon-matr-t"></span>Матрасы</a></li>
+            <li><a href="/"><span class="icon-bed-t"></span>Кровати</a></li>
+            <li><a href="/"><span class="icon-bedc-t"></span>Постельное белье</a></li>
+            <li><a href="/"><span class="icon-cover-t"></span>Чехлы</a></li>
+            <li><a href="/"><span class="icon-mcover-t"></span>Наматрасники</a></li>
+            <li><a href="/"><span class="icon-pill-t"></span>Подушки</a></li>
+            <li><a href="/"><span class="icon-blank-t"></span>Одеяла</a></li>
+            <li><a href="/"><span class="icon-base-t"></span>Основания</a></li>
+            <li><a href="/"><span class="icon-headb-t"></span>Изголовья</a></li>
+            <li class="spec-item"><a href="/"><span class="icon-forchild-t"></span>Для детей</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul class="navbar navbar-top-3rd">
+      <li class="active"><a href="/">Как купить</a></li>
+      <li><a href="/">Доставка</a></li>
+      <li><a href="/">Гарантии</a></li>
+      <li><a href="/">Адреса магазинов</a></li>
+    </ul><div class="clearfix"></div>
+  </div>
+  <div id="middle">
+    <div class="row-fluid">
+      <div class="span3">
+        <h3 class="cfn">Оформление товара</h3>
+        <p>Матрас Evita Zone - тонкий матрас, который может поставляется в скрученном виде, на заказ.  Высота матраса 16 см., легкий и маневренный он идеален для применения на даче, а также в качестве детского или диванного матраса.  Это очень удобно, ведь скрученный матрас, так его еще называют, легко доставить на дальние расстояния, приятно подарить или получить в подарок. Матрас скручен в рулон по</p>
+        <h3 class="cfn">Доп. услуги</h3>
+        <p>Благодаря этому материалу матрас приобретает такие ценные свойства, как воздухопроницаемость, долговечность (устойчивость к деформации на протяжении 10 -12 лет) и экологичность.  Кроме того, матрас отличается высокими ортопедическими характеристиками. </p> 
+        <p>Благодаря изменению глубины фигурной резки монолитного блока достигается индивидуальная жесткость для различных участков тела. </p>
+        <p>Матрас состоит из экологически чистых и безопасных материалов, что подтверждается соответствующими сертификатами. Особенности данного матраса – это способность удерживать тело на поверхности, позвоночник в прямом положении, прекрасно отводить влагу!</p>
+      </div>
+      <div class="span9">
+        <ul class="breadcrumbs clearfix">
+          <li><a href="#">Главная</a><span>/</span></li>
+          <li>Оформление заказа</li>
+        </ul>
+        
+        
+        
+        
+        <div id="checkout">
+          <ul class="tabs">
+            <li><a href="#tab-1">Шаг 1: информация о доставке</a></li>
+            <li><a href="#tab-2">Шаг 2: выбор услуг</a></li>
+            <li><a href="#tab-3">Шаг 3: способ оплаты</a></li>
+          </ul>
+          <div id="tab-1">
+            <form name="step1" action="">
+            <p class="text-big text-darken">Укажите информацию о доставке</p>
+            <div class="row-fluid">
+            	<div class="span6">
+                <div class="field">
+                  <label for="">Фамилия<span class="text-em">*</span>:</label>
+                  <input type="text" name="lastname" value="Иванов" />
+                </div>
+                <div class="field">
+                  <label for="">Имя<span class="text-em">*</span>:</label>
+                  <input type="text" name="firstname" value="Иван" />
+                </div>
+                <div class="field">
+                  <label for="">Адрес доставки<span class="text-em">*</span>:</label>
+                  <input type="text" name="address" value="г. Москва" />
+                </div>
+                <div class="field">
+                  <label for="">E-mail<span class="text-em">*</span>:</label>
+                  <input type="text" name="email" value="ivanov@gmail.com" />
+                </div>
+                <p class="text-right"><span class="text-em">*</span> - поля обязательные для заполнения.</p>
+              </div>
+              <div class="span5 offset1">
+                <div class="field">
+                  <label for="">Телефон<span class="text-em">*</span>:</label>
+                  <input type="text" name="phone" value="+7 916 1112233" />
+                </div>
+                <div class="field">
+                  <label for="">Комментарии:</label>
+                  <textarea name="comment" id="" cols="25" rows="4"></textarea>
+                </div>
+                <div class="text-right">
+                  <button class="btn-confirm">Далее<span class="icon-arrow-right"></span></button>           
+                </div>
+              </div>
+            </div>
+            </form>
+          </div>
+          <div id="tab-2">
+            <form name="step2" action="">
+            <p class="text-big text-darken">Выберите дополнительные услуги, которые вы хотели бы включить в заказ.</p>
+            <p><span class="text-em">Доступные бесплатные услуги:</span></p>
+            <ul class="selectable">
+              <li>
+                <span class="icon-exchange"></span>Обмен товара
+                <input type="hidden" name="exchange" />
+                <div class="bubble">
+                	<div class="bbl-title">Доп. гарантия</div>
+                  <div class="bbl-arrow"></div>
+                  <p>Описание того как все это происходит. Просто берут и вывозят Ваш любимый мусор. Стоимость зависит от заказываемого вами товара. Чем больше мусора, тем меньше места в Вашем доме. Собирайте мусор и </p>
+                </div>
+              </li>
+              <li>
+                <span class="icon-warr"></span>Гарантия
+                <input type="hidden" name="warr" />
+                <div class="bubble">
+                	<div class="bbl-title">Доп. гарантия</div>
+                  <div class="bbl-arrow"></div>
+                  <p>Описание того как все это происходит. Просто берут и вывозят Ваш любимый мусор. Стоимость зависит от заказываемого вами товара. Чем больше мусора, тем меньше места в Вашем доме. Собирайте мусор и </p>
+                </div>
+              </li>
+              <li>
+                <span class="icon-tdrive"></span>Тест-драйв
+                <input type="hidden" name="tdrive" />
+                <div class="bubble">
+                	<div class="bbl-title">Доп. гарантия</div>
+                  <div class="bbl-arrow"></div>
+                  <p>Описание того как все это происходит. Просто берут и вывозят Ваш любимый мусор. Стоимость зависит от заказываемого вами товара. Чем больше мусора, тем меньше места в Вашем доме. Собирайте мусор и </p>
+                </div>
+              </li>
+              <li>
+                <span class="icon-elevator"></span>Подъем на лифте
+                <input type="hidden" name="elevator" />
+              </li>
+              <li>
+                <span class="icon-manualfree"></span>Ручной подъем
+                <input type="hidden" name="manualfree" />
+              </li>
+              <li>
+                <span class="icon-pickup"></span>Самовывоз
+                <input type="hidden" name="pickup" />
+              </li>
+              <li>
+                <span class="icon-garbcoll"></span>Вывоз мусора
+                <input type="hidden" name="garbcoll" />
+              </li>
+              <li>
+                <span class="icon-whitegloves"></span>Доставка в белых перчатках и бахилах
+                <input type="hidden" name="whitegloves" />
+              </li>
+              <li>
+                <span class="icon-unpack"></span>Распаковка
+                <input type="hidden" name="unpack" />
+              </li>
+              <li>
+                <span class="icon-remold"></span>Вывоз старого матраса
+                <input type="hidden" name="remold" />
+              </li>
+              <li>
+                <span class="icon-measure"></span>Замер матраса на дому
+                <input type="hidden" name="measure" />
+              </li>
+              <li>
+                <span class="icon-support"></span>Техподдержка 24 часа
+                <input type="hidden" name="support" />
+              </li>
+              <li>
+                <span class="icon-gifts"></span>Подарки</a>
+                <input type="hidden" name="gifts" />
+              </li>
+            </ul><div class="clearfix"></div>
+            
+            
+            <p><span class="text-em">Доступные платные услуги:</span></p>
+            <ul class="selectable">
+              <li>
+                <span class="icon-extwarr"></span><div class="serv-ttl">Доп. гарантия +18 месяцев</div><div class="text-em">1 200 руб.</div>
+                <div class="bubble">
+                	<div class="bbl-title">Доп. гарантия</div>
+                  <div class="bbl-arrow"></div>
+                  <p>Описание того как все это происходит. Просто берут и вывозят Ваш любимый мусор. Стоимость зависит от заказываемого вами товара. Чем больше мусора, тем меньше места в Вашем доме. Собирайте мусор и </p>
+                </div>
+                <input type="hidden" name="extwarr" />
+              </li>
+              <li>
+                <span class="icon-manual"></span><div class="serv-ttl">Ручной подъем</div><div class="text-em">2 355 руб.</div>
+                <div class="bubble">
+                	<div class="bbl-title">Ручной подъем</div>
+                  <div class="bbl-arrow"></div>
+                  <p>Описание того как все это происходит. Просто берут и вывозят Ваш любимый мусор. Стоимость зависит от заказываемого вами товара. Чем больше мусора, тем меньше места в Вашем доме. Стоимость зависит от заказываемого вами товара. Чем больше мусора, тем меньше места в Вашем доме.  </p>
+                </div>
+                <input type="hidden" name="manual" />
+              </li>
+              <li>
+                <span class="icon-deliv"></span><div class="serv-ttl">Доставка</div><div class="text-em">2 500 руб.</div>
+                <div class="bubble">
+                	<div class="bbl-title">Доставка</div>
+                  <div class="bbl-arrow"></div>
+                  <p>Описание того как все это происходит. Просто берут и вывозят Ваш любимый мусор. </p>
+                </div>
+                <input type="hidden" name="deliv" />
+              </li>
+              <li>
+                <span class="icon-specdeliv"></span><div class="serv-ttl">Срочная доставка</div><div class="text-em">12 500 руб.</div>
+                <input type="hidden" name="specdeliv" />
+              </li>
+              <li>
+                <span class="icon-in1day"></span><div class="serv-ttl">Доставка за 1 день</div><div class="text-em">5 700 руб.</div>
+                <input type="hidden" name="in1day" />
+              </li>
+              <li>
+                <span class="icon-atnight"></span><div class="serv-ttl">Доставка в ночное время</div><div class="text-em">6 300 руб.</div>
+                <input type="hidden" name="atnight" />
+              </li>
+              <li>
+                <span class="icon-atconvtime"></span><div class="serv-ttl">Доставка в удобное время</div><div class="text-em">8 990 руб.</div>
+                <input type="hidden" name="atconvtime" />
+              </li>
+              <li>
+                <span class="icon-giftwrap"></span><div class="serv-ttl">Подарочная упаковка</div><div class="text-em">500 руб.</div>
+                <input type="hidden" name="giftwrap" />
+              </li>
+              <li>
+                <span class="icon-assem"></span><div class="serv-ttl">Сборка</div><div class="text-em">1 500 руб.</div>
+                <input type="hidden" name="assem" />
+              </li>
+              <li>
+                <span class="icon-delnassem"></span><div class="serv-ttl">Сборка в день доставки</div><div class="text-em">3 500 руб.</div>
+                <input type="hidden" name="delnassem" />
+              </li>
+              <li>
+                <span class="icon-assemdiscount"></span><div class="serv-ttl">Сборка в два раза дешевле</div><div class="text-em">750 руб.</div>
+                <div class="bubble">
+                	<div class="bbl-title">Сборка в два раза дешевле</div>
+                  <div class="bbl-arrow"></div>
+                  <p>Описание того как все это происходит. Просто берут и вывозят Ваш любимый мусор. Стоимость зависит от заказываемого вами товара. Чем больше мусора, тем меньше места в Вашем доме. Собирайте мусор и </p>
+                </div>
+                <input type="hidden" name="assemdiscount" />
+              </li>
+              <li>
+                <span class="icon-assemnwarr"></span><div class="serv-ttl">Наша сборка - вам гарантия</div><div class="text-em">1 950 руб.</div>
+                <input type="hidden" name="assemnwarr" />
+              </li>
+            </ul><div class="clearfix"></div>
+            <div class="text-right">
+              <button class="btn-confirm">Далее<span class="icon-arrow-right"></span></button><br>
+              <button class="btn-cancel">Назад<span class="icon-arrow-left"></span></button>           
+            </div>
+            </form>
+          </div>
+          <div id="tab-3">
+            <form name="step3" action="">
+            <p class="text-big text-darken">Укажите удобный для вас способ оплаты</p>
+            <div class="row-fluid">
+            	<div class="span6">
+                <div>
+                  <input type="radio" name="paymenttype" /><label for="">Оплата кредитной картой</label>
+                  <span class="icon-card"></span>
+                </div>
+                <div>
+                  <label>Выберите тип карты:</label>
+                  <select name="card">
+                    <option value="1" selected>VISA</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="span6">
+                <input type="radio" name="paymenttype" /><label for="">Оплата по факту получения товара</label>
+                <div class="text-right">
+                  <button class="btn-confirm">Оформить<span class="icon-arrow-right"></span></button><br>
+                  <button class="btn-cancel">Назад<span class="icon-arrow-left"></span></button>           
+                </div>
+              </div>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+  </div><!-- #middle-->
+</div><!-- #wrapper -->
+<div id="footer">
+  <div class="row-fluid">
+    <div class="footer-1st">
+      <div id="copyright">
+        <div id="small-logo"><a href="/"><img src="./images/small-logo.png" alt="" width="83" height="52"></a></div>
+        <div class="copy">&copy; Надо спать &#151; 2013</div>
+      </div>
+    </div>
+    <div class="footer-2nd">
+      <ul class=" navbar navbar-bottom clearfix">
+        <li><span class="icon-howto-b"></span>Как купить</a></li>
+        <li><span class="icon-deli-b"></span>Доставка</a></li>
+        <li><span class="icon-guar-b"></span>Гарантии</a></li>
+        <li><span class="icon-addr-b"></span>Адреса магазинов</a></li>
+      </ul>
+      <ul class="navbar navbar-list text-small">
+        <li><a href="#">Матрасы</a></li>
+        <li><a href="#">Основания</a></li>
+        <li><a href="#">Подушки</a></li>
+        <li><a href="#">Чехлы</a></li>
+        <li><a href="#">Одеяла</a></li>
+        <li><a href="#">Наматрасники</a></li>
+        <li><a href="#">Кровати</a></li>
+        <li><a href="#">Изголовья</a></li>
+      </ul>
+    </div>
+    <div class="footer-3rd">
+      <ul class="navbar navbar-list">
+        <li><a href="#">Вакансии</a></li>
+        <li><a href="#">Сертификаты</a></li>
+        <li><a href="#">Акции</a></li>
+      </ul><div class="clearfix"></div>
+      <ul class="navbar navbar-social">
+        <li><a href="#"><span class="icon-fb-b"></span></a></li>
+        <li><a href="#"><span class="icon-gp-b"></span></a></li>
+        <li><a href="#"><span class="icon-tw-b"></span></a></li>
+        <li><a href="#"><span class="icon-vk-b"></span></a></li>
+      </ul><div class="clearfix"></div>
+      <a href="#">создание сайта</a> студия Webbix, 2011
+    </div>
+  </div>
+</div><!-- #footer --> 
+</body>
+</html>

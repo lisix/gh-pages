@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Надо спать!</title>	
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />	
+  <meta name="viewport" content="width=1000">
+  <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="./js/cfn.js"></script>
+  <script type="text/javascript" src="./js/plugins.js"></script> 
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#lk').tabs();
+      $('input, select').styler();
+      $('.table tr').filter(":odd").addClass('odd');
+    });
+  </script>
+</head>
+<body>
+<div id="wrapper">
+  <div id="header">
+    <div id="userbar">
+      <span>Регион: <a href="/" id="link-region">Москва</a></span>
+      <span class="phone">Телефоны: <strong>7 (812) 643-23-95;  +7 (812) 643-23-95</strong></span>
+      <span><a href="#">Заказать звонок</a></span>
+      <div class="search">
+        <form action="/search">
+          <button>поиск</button>
+          <input type="text" data-placeholder="найти..." />
+        </form>
+      </div>
+      <div class="basket"><a href="#"><span class="icon-basket"></span>В корзине</a> <strong>(143)</strong></div>     
+    </div>
+    <div id="headerbar">
+      <div id="headerbar-inner">
+        <div id="logo">
+          <a href="/"><img src="./images/logo.png" alt="" width="139" height="84"></a>
+        </div>
+        <div class="navbar navbar-top-2nd">        
+          <ul>
+            <li><a href="/"><span class="icon-matr-t"></span>Матрасы</a></li>
+            <li><a href="/"><span class="icon-bed-t"></span>Кровати</a></li>
+            <li><a href="/"><span class="icon-bedc-t"></span>Постельное белье</a></li>
+            <li><a href="/"><span class="icon-cover-t"></span>Чехлы</a></li>
+            <li><a href="/"><span class="icon-mcover-t"></span>Наматрасники</a></li>
+            <li><a href="/"><span class="icon-pill-t"></span>Подушки</a></li>
+            <li><a href="/"><span class="icon-blank-t"></span>Одеяла</a></li>
+            <li><a href="/"><span class="icon-base-t"></span>Основания</a></li>
+            <li><a href="/"><span class="icon-headb-t"></span>Изголовья</a></li>
+            <li class="spec-item"><a href="/"><span class="icon-forchild-t"></span>Для детей</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul class="navbar navbar-top-3rd">
+      <li class="active"><a href="/">Как купить</a></li>
+      <li><a href="/">Доставка</a></li>
+      <li><a href="/">Гарантии</a></li>
+      <li><a href="/">Адреса магазинов</a></li>
+    </ul><div class="clearfix"></div>
+  </div>
+  <div id="middle">
+    <div class="row-fluid">
+      <div class="span3">
+        <h3 class="cfn">BEST SELLERS</h3>
+        <ul class="navbar-side">
+          <li><a href="#">Классические матрасы</a></li>
+          <li><a href="#">Ортопедические матрасы</a></li>
+          <li><a href="#">Детские матрасы</a></li>
+          <li><a href="#">Элитные матрасы</a></li>
+          <li><a href="#">Беспружинные матрасы</a></li>
+          <li><a href="#">Вакуумные матрасы</a></li>
+          <li><a href="#">Матрасы нестандартных размеров</a></li>
+        </ul>
+        <h3 class="cfn">Производители</h3>
+        <ul class="navbar-side">
+          <li><a href="#">Askona  -20%-40%</a></li>
+          <li><a href="#">Consul  <span class="text-highlight">Акция!</span></a></li>
+          <li><a href="#">Evita  <span class="text-highlight">-20%-50%</span></a></li>
+          <li><a href="#">Hukla</a></li>
+          <li><a href="#">King Koil  <span class="text-highlight">-20%</span></a></li>
+          <li><a href="#">Malie</a></li>
+          <li><a href="#">Mediflex  <span class="text-highlight">-20%</span></a></li>
+          <li><a href="#">Pirelli  <span class="text-highlight">-15%</span></a></li>
+          <li><a href="#">Serta  <span class="text-highlight">-30%</span></a></li>
+          <li><a href="#">Simmons  <span class="text-highlight">- 40%</span></a></li>
+          <li><a href="#">Sleepeezee</a></li>
+          <li><a href="#">Tempur</a></li>
+          <li><a href="#">Орматек  <span class="text-highlight">-30%-50%</span></a></li>           
+        </ul>
+      </div>
+      <div class="span9">
+        <ul class="breadcrumbs clearfix">
+          <li><a href="#">Главная</a><span>/</span></li>
+          <li>Личный кабинет</li>
+        </ul>
+        <div id="lk">
+          <ul class="tabs">
+            <li><a href="#tab-1">Изменить параметры</a></li>
+            <li><a href="#tab-2">Просмотреть заказы</a></li>
+          </ul>
+          <div id="tab-1">
+            <div class="row-fluid">
+              <div class="span6">
+                <div class="field">
+                  <label for="">Фамилия:</label>
+                  <input type="text" />
+                </div>
+                <div class="field">
+                  <label for="">Имя:</label>
+                  <input type="text" />
+                </div>
+                <div class="field">
+                  <label for="">Отчество:</label>
+                  <input type="text" />
+                </div>
+                <div class="field">
+                  <label for="">Адрес доставки 1:</label>
+                  <span class="perm-address" >123456, Москва, ул. Нагорная, д. 50, к. 3, кв. 205</span> <span class="icon-close"></span>
+                </div>
+                <div class="field">
+                  <label for="">Время доставки 1:</label>
+                  <input type="text" class="xx-small" /> : <input type="text" class="xx-small" />
+                  <button class="btn-confirm">Добавить адрес<span class="icon-add-btn"></span></button>
+                </div>
+              </div>
+              <div class="span6">
+                <p class="text-big text-darken"><strong>Изменить пароль</strong></p>
+                <div class="field">
+                  <label for="">Старый пароль:</label>
+                  <input type="password" />
+                </div>
+                <div class="field">
+                  <label for="">Новый пароль:</label>
+                  <input type="password" />
+                </div>
+                <div class="field text-right">
+                  <button class="btn-cancel">Отменить<span class="icon-reset"></span></button>
+                  <button class="btn-confirm">Сохранить<span class="icon-submit"></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab-2">
+            <table class="table">
+            <thead>
+              <tr>
+                <th width="20%">Номер заказа</th>
+                <th width="20%">Состав заказа</th>
+                <th width="20%">Статус заказа<span class="icon-arrow-up"></span></th>
+                <th width="20%">Дата доставки<span class="icon-arrow-down"></span></th>
+                <th width="20%">Стоимость<span class="icon-arrow-up"></span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>125475</td>
+                <td><a href="#">Посмотреть</a></td>
+                <td><a href="#">отгружен</a></td>
+                <td>11.03.2013</td>
+                <td>2 300 руб</td>
+              </tr>
+              <tr>
+                <td>125475</td>
+                <td><a href="#">Посмотреть</a></td>
+                <td><a href="#">отгружен</a></td>
+                <td>11.03.2013</td>
+                <td>2 300 руб</td>
+              </tr>
+              <tr>
+                <td>125475</td>
+                <td><a href="#">Посмотреть</a></td>
+                <td><a href="#">отгружен</a></td>
+                <td>11.03.2013</td>
+                <td>2 300 руб</td>
+              </tr>
+              <tr>
+                <td>125475</td>
+                <td><a href="#">Посмотреть</a></td>
+                <td><a href="#">ожидает подтверждения</a></td>
+                <td>11.03.2013</td>
+                <td>2 300 руб</td>
+              </tr>
+              <tr>
+                <td>125475</td>
+                <td><a href="#">Посмотреть</a></td>
+                <td><a href="#">оплачен</a></td>
+                <td>11.03.2013</td>
+                <td>2 300 руб</td>
+              </tr>
+              <tr>
+                <td>125475</td>
+                <td><a href="#">Посмотреть</a></td>
+                <td><a href="#">отгружен</a></td>
+                <td>11.03.2013</td>
+                <td>2 300 руб</td>
+              </tr>
+            </tbody>
+            </table>
+            <div class="pagination pagination-bottom"> 
+              <ul class="navbar">
+                <li>Страницы:</li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+                <li><a href="#">...</a></li>
+                <li><span>|</span><a href="#"><span>вперед</span></a></li>
+                <li><span>|</span><a href="#"><span>назад</span></a></li>
+              </ul><div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+  </div><!-- #middle-->
+</div><!-- #wrapper -->
+<div id="footer">
+  <div class="row-fluid">
+    <div class="footer-1st">
+      <div id="copyright">
+        <div id="small-logo"><a href="/"><img src="./images/small-logo.png" alt="" width="83" height="52"></a></div>
+        <div class="copy">&copy; Надо спать &#151; 2013</div>
+      </div>
+    </div>
+    <div class="footer-2nd">
+      <ul class=" navbar navbar-bottom clearfix">
+        <li><a href="/"><span class="icon-howto-b"></span>Как купить</a></li>
+        <li><a href="/"><span class="icon-deli-b"></span>Доставка</a></li>
+        <li><a href="/"><span class="icon-guar-b"></span>Гарантии</a></li>
+        <li><a href="/"><span class="icon-addr-b"></span>Адреса магазинов</a></li>
+      </ul>
+      <ul class="navbar navbar-list text-small">
+        <li><a href="#">Матрасы</a></li>
+        <li><a href="#">Основания</a></li>
+        <li><a href="#">Подушки</a></li>
+        <li><a href="#">Чехлы</a></li>
+        <li><a href="#">Одеяла</a></li>
+        <li><a href="#">Наматрасники</a></li>
+        <li><a href="#">Кровати</a></li>
+        <li><a href="#">Изголовья</a></li>
+      </ul>
+    </div>
+    <div class="footer-3rd">
+      <ul class="navbar navbar-list">
+        <li><a href="#">Вакансии</a></li>
+        <li><a href="#">Сертификаты</a></li>
+        <li><a href="#">Акции</a></li>
+      </ul><div class="clearfix"></div>
+      <ul class="navbar navbar-social">
+        <li><a href="#"><span class="icon-fb-b"></span></a></li>
+        <li><a href="#"><span class="icon-gp-b"></span></a></li>
+        <li><a href="#"><span class="icon-tw-b"></span></a></li>
+        <li><a href="#"><span class="icon-vk-b"></span></a></li>
+      </ul><div class="clearfix"></div>
+      <a href="#">создание сайта</a> студия Webbix, 2011
+    </div>
+  </div>
+</div><!-- #footer --> 
+</body>
+</html>
